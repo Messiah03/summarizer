@@ -1,13 +1,11 @@
-from __init__ import create_app 
+from __init__ import create_app, redirect
 import quickstart
 
 app = create_app()
 
-if __name__ =='__main__':
-    app.run(debug=False) #off in production
-
 @app.route("/")
 def home():
-    return "Hello, Flask!"
+    return redirect(quickstart.main())
 
-quickstart.main()
+if __name__ =='__main__':
+    app.run(debug=False) #off in production

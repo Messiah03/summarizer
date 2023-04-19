@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 
 def create_app():   
     app = Flask(__name__)
